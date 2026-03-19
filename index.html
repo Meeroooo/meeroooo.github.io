@@ -484,6 +484,7 @@
 const projects = [
   {
     id: 'ilm-connect',
+    icon: '🌐',
     title: 'ILM-CONNECT Website',
     description: 'Full UX redesign and digital marketing overhaul for Qatar\'s professional community platform.',
     label: 'Live · WIX',
@@ -501,6 +502,8 @@ const projects = [
   },
   {
     id: 'ilm-corporate',
+    image: 'https://raw.githubusercontent.com/Meeroooo/meeroooo.github.io/main/Corporate1.png',
+    images: ['https://raw.githubusercontent.com/Meeroooo/meeroooo.github.io/main/Corporate1.png', 'https://raw.githubusercontent.com/Meeroooo/meeroooo.github.io/main/Corporate2.png', 'https://raw.githubusercontent.com/Meeroooo/meeroooo.github.io/main/Corporate3.png'],
     title: 'ILM Corporate Website',
     description: 'Clean, professional web presence for ILM\'s corporate training and leadership development arm.',
     label: 'Coming Soon · WIX',
@@ -517,6 +520,8 @@ const projects = [
   },
   {
     id: 'genrx',
+    image: 'https://raw.githubusercontent.com/Meeroooo/meeroooo.github.io/main/GenRx Poster.png',
+    images: ['https://raw.githubusercontent.com/Meeroooo/meeroooo.github.io/main/GenRx Poster.png', 'https://raw.githubusercontent.com/Meeroooo/meeroooo.github.io/main/GenRx2.png'],
     title: 'GenRx',
     description: 'Award-winning personalised medicine recommendation platform. Winner of 5,000 QAR at Katara Space & Science.',
     label: '🏆 Award Winner',
@@ -533,6 +538,8 @@ const projects = [
   },
   {
     id: 'edgage',
+    image: 'https://raw.githubusercontent.com/Meeroooo/meeroooo.github.io/main/Edgage1.png',
+    images: ['https://raw.githubusercontent.com/Meeroooo/meeroooo.github.io/main/Edgage1.png', 'https://raw.githubusercontent.com/Meeroooo/meeroooo.github.io/main/Edgage2.png'],
     title: 'EDGAGE Brand Identity',
     description: 'Complete brand identity system for an ed-tech platform — logo, colour palette, typography and mockup collateral.',
     label: 'Branding · Canva',
@@ -549,6 +556,7 @@ const projects = [
   },
   {
     id: 'behaviour-module',
+    icon: '🧠',
     title: 'Behaviour Management Module',
     description: 'Bachelor\'s thesis — a psychology-informed LMS prototype with a research-backed badge and reward system.',
     label: 'Thesis Project',
@@ -565,6 +573,7 @@ const projects = [
   },
   {
     id: 'ilm-education-hack',
+    icon: '🔍',
     title: 'Caught in the Act: Website Security Recovery',
     description: 'Investigated and remediated a live WordPress hack on ilmeducationconsultants.com — tracking down embedded malicious links injected via outdated plugins.',
     label: 'Security Recovery',
@@ -582,6 +591,7 @@ const projects = [
   },
     {
     id: 'cogniprompt',
+    icon: '✨',
     title: 'CogniPrompt',
     description: 'AI-based productivity tool — currently in development. Brand identity and UI in progress.',
     label: 'In Development',
@@ -632,9 +642,7 @@ function renderProjects() {
   container.innerHTML = projects.map(p => `
     <div class="project-card glass-card rounded-2xl overflow-hidden group" onclick="openProjectDetail('${p.id}')">
       <div class="aspect-video bg-gradient-to-br ${p.gradient} relative overflow-hidden flex items-center justify-center">
-        <span class="text-5xl opacity-30 group-hover:opacity-50 transition-opacity select-none">
-          ${p.id === 'ilm-connect' ? '🌐' : p.id === 'ilm-corporate' ? '🏢' : p.id === 'genrx' ? '💊' : p.id === 'edgage' ? '🎨' : p.id === 'behaviour-module' ? '🧠' : p.id === 'ilm-education-hack' ? '🔍' : p.id === 'cogniprompt' ? '✨' : '✨'}
-        </span>
+        ${p.image ? `<img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">` : `<span class="text-5xl opacity-30 group-hover:opacity-50 transition-opacity select-none">${p.icon || '✨'}</span>`}
         <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent opacity-60"></div>
         <div class="absolute top-4 left-4">
           <span class="text-xs mono ${p.labelColor} glass-card px-3 py-1 rounded-full border border-white/10">${p.label}</span>
