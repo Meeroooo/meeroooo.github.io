@@ -492,7 +492,7 @@ const projects = [
     label: 'Live · WIX',
     labelColor: 'text-green-400',
     gradient: 'from-yellow-600/30 to-gray-800/60',
-    tags: ['WIX', 'UI/UX', 'Digital Marketing', 'SEO'],
+    tags: ['WIX', 'UI/UX', 'Digital Marketing', 'SEO', 'Content Strategy'],
     detailContent: {
       overview: 'ILM-CONNECT is a professional community platform supporting growth, connection and opportunity in Qatar. I joined as Web Developer & Digital Marketing Strategist and took full ownership of the website\'s UX, content strategy, and digital campaigns.',
       challenge: 'The site was visually cluttered with an inconsistent theme, and the sign-up flow was long and confusing causing users to drop off quickly. Retention was low and events weren\'t converting.',
@@ -566,7 +566,7 @@ const projects = [
     label: 'Thesis Project',
     labelColor: 'text-cyan-400',
     gradient: 'from-cyan-900/30 to-teal-900/30',
-    tags: ['React', 'UX Research', 'LMS', 'Psychology'],
+    tags: ['ReactJS', 'Firebase', 'Wireframing', 'Canva', 'UX Research', 'Psychology'],
     detailContent: {
       overview: 'My final-year Computer Science thesis a full LMS (Learning Management System) prototype grounded in behavioural psychology research. The project moved from academic study to working software.',
       challenge: 'Behaviour management tools in education often rely on punishment without exploring the research on why rewards produce better long-term outcomes. I wanted to build something that was evidence-based, not just functional.',
@@ -603,7 +603,7 @@ const projects = [
     label: 'In Development',
     labelColor: 'text-violet-400',
     gradient: 'from-violet-900/20 to-pink-900/20',
-    tags: ['AI Tool', 'Product Design', 'Coming Soon'],
+    tags: ['Canva', 'Branding', 'AI Concept', 'Strategy'],
     detailContent: {
       overview: 'CogniPrompt is an original AI productivity concept I have been developing independently. The brand identity work is complete and the product is currently in the ideation and strategy phase, with UI development planned as the concept matures.',
       challenge: 'The AI productivity space is crowded. CogniPrompt needs a distinct identity and a UI that feels genuinely useful rather than a generic AI wrapper.',
@@ -624,13 +624,12 @@ const testimonials = [
     testimonial: 'Ameera consistently demonstrated creativity, strategic thinking, and excellent analytical skills. Her contributions to the digital marketing campaigns are innovative and results-driven, and her ability to interpret data and implement effective strategies is highly impressive. Ameera\'s collaborative spirit and dedication to achieving team goals are an essential part of her success. We are confident that Ameera Khan will bring the same level of passion and expertise to any future role.'
   },
   {
-    name: 'Testimonial Coming Soon',
-    title: 'Manager',
-    organization: 'ILM-Connect',
-    initials: '?',
-    color: 'from-violet-500/20 to-violet-600/10',
-    testimonial: 'This space is reserved for an upcoming testimonial from the ILM-Connect management team.',
-    placeholder: true
+    name: 'Lynden Cooke',
+    title: 'Assistant Director',
+    organization: 'ILM Education',
+    initials: 'LC',
+    color: 'from-violet-500/30 to-violet-600/20',
+    testimonial: "Ameera\'s attention to detail and collaboration made for a great end result. Our website and social media posts displayed our branding and message clearly."
   },
   {
     name: 'Testimonial Coming Soon',
@@ -716,9 +715,19 @@ function openProjectDetail(projectId) {
           <span class="text-cyan-400 text-xs tracking-widest uppercase mb-4 block mono">${project.label}</span>
           <h1 class="text-4xl md:text-5xl font-bold mb-4">${project.title}</h1>
           <p class="text-xl text-gray-400 mb-8">${project.description}</p>
-          <div class="flex flex-wrap gap-2 mb-12">
+          <div class="flex flex-wrap gap-2 mb-10">
             ${project.tags.map(t => `<span class="tag">${t}</span>`).join('')}
           </div>
+          ${(project.images && project.images.length > 0) ? `
+          <div class="mb-10">
+            <div class="grid ${`grid-cols-1 ${project.images.length > 1 ? 'md:grid-cols-2' : ''}`} gap-4">
+              ${project.images.map(img => `
+                <div class="glass-card rounded-2xl overflow-hidden">
+                  <img src="${img}" alt="${project.title}" class="w-full object-cover hover:scale-105 transition-transform duration-500 cursor-zoom-in" onclick="this.classList.toggle('scale-150') || this.classList.toggle('z-50') || this.classList.toggle('relative')">
+                </div>`).join('')}
+            </div>
+            <p class="text-gray-600 text-xs text-center mt-3 mono">Click any image to zoom</p>
+          </div>` : ''}
           <div class="space-y-10">
             <div class="glass-card rounded-2xl p-8">
               <h2 class="text-xl font-bold mb-3 text-cyan-400">Overview</h2>
