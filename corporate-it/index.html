@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate &amp; IT Portfolio – Ameera Khan</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    /* Page-specific accent colours: violet/blue for corporate professional */
+    :root { --accent: #7c3aed; --accent2: #3b82f6; }
+    .accent-text  { color: var(--accent); }
+    .accent2-text { color: var(--accent2); }
+  </style>
+</head>
+<body class="bg-[#0a0a0f] text-white min-h-screen">
+
+  <!-- BG SHAPES -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none">
+    <div class="geometric-shape w-96 h-96 bg-violet-600 top-20 -left-48 animate-float"></div>
+    <div class="geometric-shape w-64 h-64 bg-blue-600 top-1/3 right-10 animate-float-delay"></div>
+    <div class="geometric-shape w-72 h-72 bg-cyan-500 bottom-20 left-1/4 animate-pulse-glow"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0a0f]/50 to-[#0a0a0f]"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 glass-card">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="../index.html" class="text-xl font-bold gradient-text">AK</a>
+      <div class="hidden md:flex gap-8 items-center">
+        <a href="#overview"    class="nav-link">Overview</a>
+        <a href="#tech-stack"  class="nav-link">Tech Stack</a>
+        <a href="#projects"    class="nav-link">Projects</a>
+        <a href="#experience"  class="nav-link">Experience</a>
+        <a href="#contact"     class="nav-link">Contact</a>
+        <a href="../index.html"
+           class="inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full text-xs text-gray-300 hover:text-white hover:bg-white/10 transition-all border border-white/10">
+          ← All Portfolios
+        </a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 border-t border-white/5 mt-2">
+      <div class="flex flex-col gap-4 pt-4">
+        <a href="#overview"   class="nav-link text-sm">Overview</a>
+        <a href="#tech-stack" class="nav-link text-sm">Tech Stack</a>
+        <a href="#projects"   class="nav-link text-sm">Projects</a>
+        <a href="#experience" class="nav-link text-sm">Experience</a>
+        <a href="#contact"    class="nav-link text-sm">Contact</a>
+        <a href="../index.html" class="text-violet-400 text-sm">← All Portfolios</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center justify-center px-6 pt-20">
+    <div class="max-w-4xl mx-auto text-center animate-slide-up">
+      <span class="inline-block px-4 py-2 glass-card rounded-full text-xs tracking-widest text-violet-400 uppercase mono mb-6">
+        Corporate &amp; IT Portfolio
+      </span>
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+        Engineered.<br>
+        <span style="background:linear-gradient(135deg,#7c3aed 0%,#00d4ff 50%,#3b82f6 100%);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradient-shift 4s ease infinite;">Delivered.</span>
+      </h1>
+      <p class="text-gray-400 text-xl mb-4 font-light max-w-2xl mx-auto">
+        Shipping production-grade web platforms, research-backed software, and polished corporate digital experiences — built with precision and purpose.
+      </p>
+      <p class="text-gray-500 max-w-xl mx-auto mb-10 leading-relaxed text-sm">
+        ReactJS · Firebase · WordPress · WIX Studio · UI/UX · Frontend Architecture · Corporate Web Design · LMS Development
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#projects" class="cta-button" style="background:linear-gradient(to right,#7c3aed,#00d4ff);padding:0.75rem 2rem;border-radius:9999px;color:#fff;font-size:0.875rem;">View Projects</a>
+        <a href="#tech-stack" class="cta-button btn-ghost">Tech Stack</a>
+      </div>
+
+      <!-- STATS -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-2xl mx-auto">
+        <div class="stat-card glass-card rounded-2xl p-4 text-center">
+          <div class="text-2xl font-bold text-violet-400">2+</div>
+          <div class="text-xs text-gray-500 mt-1">Live Websites Built</div>
+        </div>
+        <div class="stat-card glass-card rounded-2xl p-4 text-center">
+          <div class="text-2xl font-bold text-blue-400">9.75</div>
+          <div class="text-xs text-gray-500 mt-1">GPA / 10</div>
+        </div>
+        <div class="stat-card glass-card rounded-2xl p-4 text-center">
+          <div class="text-2xl font-bold text-violet-400">5+</div>
+          <div class="text-xs text-gray-500 mt-1">Projects Shipped</div>
+        </div>
+        <div class="stat-card glass-card rounded-2xl p-4 text-center">
+          <div class="text-2xl font-bold text-blue-400">🏆</div>
+          <div class="text-xs text-gray-500 mt-1">Award Winner</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap py-4 border-t border-b border-white/5 bg-white/[0.02]">
+    <div class="ticker-inner">
+      <span class="mx-8 text-sm text-gray-600 mono">ReactJS</span><span class="mx-2 text-violet-500/40">✦</span>
+      <span class="mx-8 text-sm text-gray-600 mono">Firebase</span><span class="mx-2 text-blue-500/40">✦</span>
+      <span class="mx-8 text-sm text-gray-600 mono">WordPress</span><span class="mx-2 text-violet-500/40">✦</span>
+      <span class="mx-8 text-sm text-gray-600 mono">WIX Studio</span><span class="mx-2 text-blue-500/40">✦</span>
+      <span class="mx-8 text-sm text-gray-600 mono">HTML5 / CSS3 / JS</span><span class="mx-2 text-violet-500/40">✦</span>
+      <span class="mx-8 text-sm text-gray-600 mono">FlutterFlow</span><span class="mx-2 text-blue-500/40">✦</span>
+      <span class="mx-8 text-sm text-gray-600 mono">React Native</span><span class="mx-2 text-violet-500/40">✦</span>
+      <span class="mx-8 text-sm text-gray-600 mono">UI/UX Design</span><span class="mx-2 text-blue-500/40">✦</span>
+      <span class="mx-8 text-sm text-gray-600 mono">Figma</span><span class="mx-2 text-violet-500/40">✦</span>
+      <span class="mx-8 text-sm text-gray-600 mono">Canva</span><span class="mx-2 text-blue-500/40">✦</span>
+      <!-- duplicate -->
+      <span class="mx-8 text-sm text-gray-600 mono">ReactJS</span><span class="mx-2 text-violet-500/40">✦</span>
+      <span class="mx-8 text-sm text-gray-600 mono">Firebase</span><span class="mx-2 text-blue-500/40">✦</span>
+      <span class="mx-8 text-sm text-gray-600 mono">WordPress</span><span class="mx-2 text-violet-500/40">✦</span>
+      <span class="mx-8 text-sm text-gray-600 mono">WIX Studio</span><span class="mx-2 text-blue-500/40">✦</span>
+      <span class="mx-8 text-sm text-gray-600 mono">HTML5 / CSS3 / JS</span><span class="mx-2 text-violet-500/40">✦</span>
+      <span class="mx-8 text-sm text-gray-600 mono">FlutterFlow</span><span class="mx-2 text-blue-500/40">✦</span>
+      <span class="mx-8 text-sm text-gray-600 mono">React Native</span><span class="mx-2 text-violet-500/40">✦</span>
+      <span class="mx-8 text-sm text-gray-600 mono">UI/UX Design</span><span class="mx-2 text-blue-500/40">✦</span>
+      <span class="mx-8 text-sm text-gray-600 mono">Figma</span><span class="mx-2 text-violet-500/40">✦</span>
+      <span class="mx-8 text-sm text-gray-600 mono">Canva</span><span class="mx-2 text-blue-500/40">✦</span>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section id="overview" class="relative py-28 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="section-label text-violet-400">My Approach</span>
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">Code Built to <span class="gradient-text">Last</span></h2>
+          <p class="text-gray-400 leading-relaxed mb-5">
+            I build digital products that combine technical rigour with design intentionality. Whether it's a production web platform for a corporate client, a research-backed LMS prototype, or an award-winning health application, I bring the same standard: well-architected, accessible, and maintainable.
+          </p>
+          <p class="text-gray-400 leading-relaxed mb-5">
+            With a BSc in Computer Science (GPA 9.75/10) and a Master's in Cybersecurity in progress, my technical foundation covers frontend architecture, database design, mobile development, and secure coding practices.
+          </p>
+          <p class="text-gray-400 leading-relaxed mb-8">
+            I've shipped live websites for professional communities and corporate training providers in Qatar, built a full LMS prototype as my thesis, and created an award-winning health application prototype — each project from concept to production.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag">Full-Lifecycle Development</span>
+            <span class="tag">UI/UX-First Thinking</span>
+            <span class="tag">Agile / Iterative</span>
+            <span class="tag">Research-Backed Design</span>
+            <span class="tag">Production Experience</span>
+          </div>
+        </div>
+
+        <!-- Achievement cards -->
+        <div class="space-y-4">
+          <div class="award-badge p-5 rounded-xl">
+            <div class="flex items-start gap-4">
+              <div class="text-3xl">🏆</div>
+              <div>
+                <div class="text-amber-400 font-semibold text-sm mb-1">Most Promising Idea — Katara Space &amp; Science</div>
+                <div class="text-gray-400 text-sm leading-relaxed">Awarded 5,000 QAR for GenRx, a personalised medicine recommendation platform. Led all product architecture, UI design, and branding.</div>
+              </div>
+            </div>
+          </div>
+          <div class="glass-card rounded-xl p-4 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-violet-500/20 flex items-center justify-center text-lg flex-shrink-0">🎓</div>
+            <div>
+              <div class="text-sm font-medium">B.Sc. Computer Science</div>
+              <div class="text-xs text-gray-500">GPA 9.75/10 · Highest Academic Scorer · Academic Scholarship</div>
+            </div>
+          </div>
+          <div class="glass-card rounded-xl p-4 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-blue-500/20 flex items-center justify-center text-lg flex-shrink-0">🔐</div>
+            <div>
+              <div class="text-sm font-medium">MSc Cybersecurity (In Progress)</div>
+              <div class="text-xs text-gray-500">Barzan UC · Swinburne University of Technology, Doha</div>
+            </div>
+          </div>
+          <div class="glass-card rounded-xl p-4 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-cyan-500/20 flex items-center justify-center text-lg flex-shrink-0">🌐</div>
+            <div>
+              <div class="text-sm font-medium">2 Live Production Websites</div>
+              <div class="text-xs text-gray-500">ilm-connect.com · ilmeducationconsultants.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section id="tech-stack" class="relative py-28 px-6 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="section-label text-violet-400">Capabilities</span>
+        <h2 class="text-4xl md:text-5xl font-bold">Tech Stack</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-10">
+        <div class="glass-card rounded-2xl p-8">
+          <h3 class="text-lg font-semibold mb-6 flex items-center gap-3">
+            <span class="w-9 h-9 rounded-lg bg-violet-500/20 flex items-center justify-center">
+              <svg class="w-5 h-5 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+              </svg>
+            </span>
+            Frontend Development
+          </h3>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between mb-2"><span class="text-gray-400 text-sm">ReactJS / HTML5 / CSS3 / JS</span><span class="text-violet-400 text-sm">87%</span></div>
+              <div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="skill-bar h-full bg-gradient-to-r from-violet-600 to-violet-400 rounded-full" style="width:87%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2"><span class="text-gray-400 text-sm">WordPress / WIX Studio</span><span class="text-violet-400 text-sm">92%</span></div>
+              <div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="skill-bar h-full bg-gradient-to-r from-violet-600 to-violet-400 rounded-full" style="width:92%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2"><span class="text-gray-400 text-sm">React Native / FlutterFlow</span><span class="text-violet-400 text-sm">78%</span></div>
+              <div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="skill-bar h-full bg-gradient-to-r from-violet-600 to-violet-400 rounded-full" style="width:78%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2"><span class="text-gray-400 text-sm">Firebase / Firestore</span><span class="text-violet-400 text-sm">85%</span></div>
+              <div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="skill-bar h-full bg-gradient-to-r from-violet-600 to-violet-400 rounded-full" style="width:85%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-8">
+          <h3 class="text-lg font-semibold mb-6 flex items-center gap-3">
+            <span class="w-9 h-9 rounded-lg bg-blue-500/20 flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+            </span>
+            UI/UX & Design Systems
+          </h3>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between mb-2"><span class="text-gray-400 text-sm">Wireframing & Prototyping</span><span class="text-blue-400 text-sm">88%</span></div>
+              <div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="skill-bar h-full bg-gradient-to-r from-blue-600 to-blue-400 rounded-full" style="width:88%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2"><span class="text-gray-400 text-sm">Canva / Affinity / Mockups</span><span class="text-blue-400 text-sm">93%</span></div>
+              <div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="skill-bar h-full bg-gradient-to-r from-blue-600 to-blue-400 rounded-full" style="width:93%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2"><span class="text-gray-400 text-sm">Brand Identity & Design Systems</span><span class="text-blue-400 text-sm">86%</span></div>
+              <div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="skill-bar h-full bg-gradient-to-r from-blue-600 to-blue-400 rounded-full" style="width:86%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2"><span class="text-gray-400 text-sm">Responsive & Accessible Design</span><span class="text-blue-400 text-sm">90%</span></div>
+              <div class="h-1.5 bg-white/5 rounded-full overflow-hidden"><div class="skill-bar h-full bg-gradient-to-r from-blue-600 to-blue-400 rounded-full" style="width:90%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full tech grid -->
+      <div class="glass-card rounded-2xl p-8">
+        <h3 class="text-sm font-medium text-gray-400 mb-6 uppercase tracking-widest mono">Full Technology Inventory</h3>
+        <div class="grid md:grid-cols-4 gap-6">
+          <div>
+            <h4 class="text-xs text-violet-400 uppercase tracking-widest mono mb-3">Languages</h4>
+            <div class="space-y-1.5">
+              <div class="tag block w-fit">HTML5 / CSS3</div>
+              <div class="tag block w-fit">JavaScript (ES6+)</div>
+              <div class="tag block w-fit">Python (basics)</div>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-xs text-violet-400 uppercase tracking-widest mono mb-3">Frameworks</h4>
+            <div class="space-y-1.5">
+              <div class="tag block w-fit">ReactJS</div>
+              <div class="tag block w-fit">React Native</div>
+              <div class="tag block w-fit">FlutterFlow</div>
+              <div class="tag block w-fit">Tailwind CSS</div>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-xs text-violet-400 uppercase tracking-widest mono mb-3">Platforms & BaaS</h4>
+            <div class="space-y-1.5">
+              <div class="tag block w-fit">Firebase</div>
+              <div class="tag block w-fit">WordPress</div>
+              <div class="tag block w-fit">WIX Studio</div>
+              <div class="tag block w-fit">GitHub Pages</div>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-xs text-violet-400 uppercase tracking-widest mono mb-3">Design & Tools</h4>
+            <div class="space-y-1.5">
+              <div class="tag block w-fit">Canva</div>
+              <div class="tag block w-fit">Affinity Designer</div>
+              <div class="tag block w-fit">VS Code</div>
+              <div class="tag block w-fit">Git / GitHub</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="relative py-28 px-6 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="section-label text-violet-400">Portfolio</span>
+        <h2 class="text-4xl md:text-5xl font-bold">Featured Projects</h2>
+        <p class="text-gray-500 mt-4 max-w-xl mx-auto text-sm">Production platforms, prototypes, and technical case studies.</p>
+      </div>
+
+      <div class="space-y-16">
+
+        <!-- Project 1: ILM Corporate Website -->
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div class="glass-card rounded-2xl overflow-hidden">
+            <div class="grid grid-cols-2 gap-2 p-4">
+              <img src="../Corporate1.png" alt="ILM Corporate Website Screenshot 1" class="rounded-xl w-full object-cover aspect-video hover:scale-105 transition-transform duration-500">
+              <img src="../Corporate2.png" alt="ILM Corporate Website Screenshot 2" class="rounded-xl w-full object-cover aspect-video hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="px-4 pb-4">
+              <img src="../Corporate3.png" alt="ILM Corporate Website Screenshot 3" class="rounded-xl w-full object-cover hover:scale-105 transition-transform duration-500">
+            </div>
+          </div>
+          <div>
+            <span class="text-xs mono text-amber-400 glass-card px-3 py-1 rounded-full border border-white/10 mb-4 inline-block">Coming Soon · WIX Studio</span>
+            <h3 class="text-2xl font-bold mb-3">ILM Corporate Website</h3>
+            <p class="text-gray-400 leading-relaxed mb-4 text-sm">
+              Designed and built the corporate website for ILM's training and organisational development arm — a clean, structured platform communicating a premium offering to HR professionals and corporate decision-makers across Qatar.
+            </p>
+            <ul class="space-y-2 mb-5">
+              <li class="flex items-start gap-2 text-sm text-gray-400">
+                <svg class="w-4 h-4 text-violet-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Clear service architecture with "Explore Services" and "Book a Call" CTAs
+              </li>
+              <li class="flex items-start gap-2 text-sm text-gray-400">
+                <svg class="w-4 h-4 text-violet-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Consistent brand identity aligned with parent ILM Education brand
+              </li>
+              <li class="flex items-start gap-2 text-sm text-gray-400">
+                <svg class="w-4 h-4 text-violet-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Premium positioning for corporate client acquisition
+              </li>
+            </ul>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag">WIX Studio</span><span class="tag">Corporate Design</span><span class="tag">UI/UX</span><span class="tag">Canva</span><span class="tag">Copywriting</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-white/5"></div>
+
+        <!-- Project 2: Behaviour Management Module (Thesis) -->
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div class="md:order-2">
+            <div class="glass-card rounded-2xl overflow-hidden">
+              <div class="grid grid-cols-3 gap-2 p-4">
+                <img src="../bm1.jpg" alt="Behaviour Module Screenshot 1" class="rounded-xl w-full object-cover aspect-square hover:scale-105 transition-transform duration-500">
+                <img src="../bm2.jpg" alt="Behaviour Module Screenshot 2" class="rounded-xl w-full object-cover aspect-square hover:scale-105 transition-transform duration-500">
+                <img src="../bm3.jpg" alt="Behaviour Module Screenshot 3" class="rounded-xl w-full object-cover aspect-square hover:scale-105 transition-transform duration-500">
+              </div>
+              <div class="grid grid-cols-3 gap-2 px-4 pb-4">
+                <img src="../mockup1.png" alt="Mockup 1" class="rounded-xl w-full object-cover aspect-square hover:scale-105 transition-transform duration-500">
+                <img src="../mockup2.png" alt="Mockup 2" class="rounded-xl w-full object-cover aspect-square hover:scale-105 transition-transform duration-500">
+                <img src="../mockup3.png" alt="Mockup 3" class="rounded-xl w-full object-cover aspect-square hover:scale-105 transition-transform duration-500">
+              </div>
+            </div>
+          </div>
+          <div class="md:order-1">
+            <span class="text-xs mono text-cyan-400 glass-card px-3 py-1 rounded-full border border-white/10 mb-4 inline-block">Thesis Project · Highest Marks</span>
+            <h3 class="text-2xl font-bold mb-3">Behaviour Management Module — LMS Prototype</h3>
+            <p class="text-gray-400 leading-relaxed mb-4 text-sm">
+              My final-year Computer Science thesis: a full, research-backed Learning Management System (LMS) prototype built on ReactJS and Firebase. The project moved from academic literature review to wireframes to Canva mockups to a working production-grade prototype.
+            </p>
+            <div class="glass-card rounded-xl p-4 mb-4">
+              <h4 class="text-xs font-semibold text-violet-400 mb-2 uppercase tracking-wider">Core Modules</h4>
+              <div class="grid grid-cols-2 gap-1 text-xs text-gray-400">
+                <span>· Psychology-informed badge system</span>
+                <span>· Assignment tracking</span>
+                <span>· Class management toggle</span>
+                <span>· Student profiles</span>
+                <span>· Search &amp; filter</span>
+                <span>· Role-based access</span>
+              </div>
+            </div>
+            <ul class="space-y-2 mb-5">
+              <li class="flex items-start gap-2 text-sm text-gray-400">
+                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Research-backed design process (literature → wireframes → prototype)
+              </li>
+              <li class="flex items-start gap-2 text-sm text-gray-400">
+                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Full LMS prototype covering 5+ core modules
+              </li>
+              <li class="flex items-start gap-2 text-sm text-gray-400">
+                <svg class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Received top marks as highest academic scorer in batch
+              </li>
+            </ul>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag">ReactJS</span><span class="tag">Firebase</span><span class="tag">Wireframing</span><span class="tag">Canva</span><span class="tag">UX Research</span><span class="tag">Educational Psychology</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-white/5"></div>
+
+        <!-- Project 3: GenRx -->
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div class="glass-card rounded-2xl overflow-hidden">
+            <div class="grid grid-cols-2 gap-2 p-4">
+              <img src="../GenRx Poster.png" alt="GenRx Poster" class="rounded-xl w-full object-cover aspect-video hover:scale-105 transition-transform duration-500">
+              <img src="../GenRx2.png" alt="GenRx App" class="rounded-xl w-full object-cover aspect-video hover:scale-105 transition-transform duration-500">
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <span class="text-xs mono text-amber-400 glass-card px-3 py-1 rounded-full border border-amber-500/20 inline-block">🏆 Award Winner — 5,000 QAR</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-3">GenRx — Personalised Medicine Platform</h3>
+            <p class="text-gray-400 leading-relaxed mb-4 text-sm">
+              Award-winning personalised medicine recommendation platform — "Bringing Precision Medicine Home." Led all product architecture, brand identity, visual design, and FlutterFlow UI development. Won the Most Promising Idea award at Katara Space and Science, receiving a 5,000 QAR prize.
+            </p>
+            <ul class="space-y-2 mb-5">
+              <li class="flex items-start gap-2 text-sm text-gray-400">
+                <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Full product design from concept to working prototype
+              </li>
+              <li class="flex items-start gap-2 text-sm text-gray-400">
+                <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Hexagonal molecular identity communicates clinical innovation
+              </li>
+              <li class="flex items-start gap-2 text-sm text-gray-400">
+                <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Winner — Katara Space &amp; Science Competition
+              </li>
+            </ul>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag">FlutterFlow</span><span class="tag">Canva</span><span class="tag">Branding</span><span class="tag">UI/UX</span><span class="tag">Health Tech</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-white/5"></div>
+
+        <!-- Project 4: ILM-CONNECT -->
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div class="md:order-2">
+            <div class="glass-card rounded-2xl overflow-hidden">
+              <div class="grid grid-cols-2 gap-2 p-4">
+                <img src="../ILMCONNECT1.png" alt="ILM-CONNECT Screenshot 1" class="rounded-xl w-full object-cover aspect-video hover:scale-105 transition-transform duration-500">
+                <img src="../ILMCONNECT2.png" alt="ILM-CONNECT Screenshot 2" class="rounded-xl w-full object-cover aspect-video hover:scale-105 transition-transform duration-500">
+              </div>
+            </div>
+          </div>
+          <div class="md:order-1">
+            <span class="text-xs mono text-green-400 glass-card px-3 py-1 rounded-full border border-white/10 mb-4 inline-block">Live · WIX</span>
+            <h3 class="text-2xl font-bold mb-3">ILM-CONNECT — Community Platform</h3>
+            <p class="text-gray-400 leading-relaxed mb-4 text-sm">
+              Web Developer &amp; Digital Marketing Strategist for Qatar's professional community platform. Took full ownership of the website's UX, restructured the visual hierarchy, simplified the sign-up process, and standardised the design language — resulting in improved retention and consistent event sign-ups.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="tag">WIX</span><span class="tag">UI/UX</span><span class="tag">Digital Marketing</span><span class="tag">SEO</span><span class="tag">Content Strategy</span>
+            </div>
+            <a href="https://ilm-connect.com" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
+              View Live Site
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFESSIONAL EXPERIENCE -->
+  <section id="experience" class="relative py-28 px-6 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="section-label text-violet-400">Background</span>
+        <h2 class="text-4xl md:text-5xl font-bold">Professional Experience</h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-8">
+
+        <!-- Role 1 -->
+        <div class="glass-card rounded-2xl p-8">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500/20 to-blue-600/20 flex items-center justify-center flex-shrink-0 text-xl">🌐</div>
+            <div class="flex-1">
+              <div class="flex items-start justify-between flex-wrap gap-2 mb-1">
+                <h3 class="text-lg font-semibold">Web Developer &amp; Digital Marketing Strategist</h3>
+                <span class="tag text-xs">ILM-CONNECT</span>
+              </div>
+              <p class="text-violet-400 text-sm mb-3">ILM Education, Doha, Qatar</p>
+              <ul class="text-gray-400 text-sm space-y-1.5 leading-relaxed">
+                <li>· Full UX redesign and digital marketing overhaul for <em class="text-white">ilm-connect.com</em></li>
+                <li>· Rebuilt visual hierarchy, simplified sign-up flow, standardised design language</li>
+                <li>· Content strategy and event promotion campaigns with measurable retention improvement</li>
+                <li>· Identified and remediated a live WordPress security compromise (0 downtime)</li>
+                <li>· Designed and built <em class="text-white">ILM Corporate</em> website for the corporate training arm</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education 1 -->
+        <div class="glass-card rounded-2xl p-8">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-cyan-600/20 flex items-center justify-center flex-shrink-0 text-xl">🔐</div>
+            <div class="flex-1">
+              <div class="flex items-start justify-between flex-wrap gap-2 mb-1">
+                <h3 class="text-lg font-semibold">Master of Cybersecurity</h3>
+                <span class="tag text-xs" style="color:#10b981;border-color:rgba(16,185,129,0.3);background:rgba(16,185,129,0.1)">In Progress</span>
+              </div>
+              <p class="text-violet-400 text-sm mb-3">Barzan University College · Swinburne University of Technology, Doha</p>
+              <p class="text-gray-400 text-sm leading-relaxed">Focus: Secure digital infrastructure, risk management, data privacy, compliance frameworks, and advanced threat analysis.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education 2 -->
+        <div class="glass-card rounded-2xl p-8">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-violet-600/20 flex items-center justify-center flex-shrink-0 text-xl">🎓</div>
+            <div class="flex-1">
+              <div class="flex items-start justify-between flex-wrap gap-2 mb-1">
+                <h3 class="text-lg font-semibold">B.Sc. Computer Science</h3>
+                <span class="tag text-xs text-amber-400 border-amber-500/30 bg-amber-500/10">GPA 9.75/10 · Highest Scorer</span>
+              </div>
+              <p class="text-violet-400 text-sm mb-3">MIE–SPPU, Doha, Qatar · Academic Scholarship · Student of the Year 2022–2023</p>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Thesis: Behaviour Management Module — a research-backed LMS prototype exploring reward vs. punishment psychology in education.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="tag">CISCO Cybersecurity</span>
+                <span class="tag">CISCO Data Science</span>
+                <span class="tag">Academic Scholarship</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Community -->
+        <div class="glass-card rounded-2xl p-8">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500/20 to-yellow-600/20 flex items-center justify-center flex-shrink-0 text-xl">🏆</div>
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold mb-1">Innovation &amp; Community</h3>
+              <p class="text-violet-400 text-sm mb-3">Qatar Tech Ecosystem</p>
+              <ul class="text-gray-400 text-sm space-y-1.5">
+                <li>· <em class="text-amber-400">Katara Space &amp; Science</em> — Most Promising Idea Award, 5,000 QAR (GenRx)</li>
+                <li>· QSTP (Qatar Science &amp; Technology Park) participant</li>
+                <li>· World AI Summit, Doha — attendee</li>
+                <li>· Cybersecurity Symposium — active participant</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="relative py-28 px-6 border-t border-white/5">
+    <div class="max-w-2xl mx-auto text-center">
+      <span class="section-label text-violet-400">Let's Build Together</span>
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Open to <span class="gradient-text">Opportunities</span></h2>
+      <p class="text-gray-400 mb-10 leading-relaxed">
+        Looking for a developer who ships production-grade work with design sensibility? Available for full-time roles, freelance engagements, and technical collaborations.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="mailto:Ameerakhan54@outlook.com" class="cta-button" style="background:linear-gradient(to right,#7c3aed,#00d4ff);padding:0.75rem 2rem;border-radius:9999px;color:#fff;font-size:0.875rem;">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Email Me
+        </a>
+        <a href="https://www.linkedin.com/in/ameera-khan-ameerakhan" target="_blank" rel="noopener" class="cta-button btn-ghost">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn
+        </a>
+        <a href="../index.html" class="cta-button btn-ghost">← All Portfolios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 px-6 border-t border-white/5">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-gray-500 text-sm">© 2025 Ameera Khan · Corporate &amp; IT Portfolio</p>
+      <div class="flex gap-6">
+        <a href="../index.html" class="text-gray-600 hover:text-violet-400 transition-colors text-sm">Main Portfolio</a>
+        <a href="../digital-marketing/" class="text-gray-600 hover:text-violet-400 transition-colors text-sm">Digital Marketing</a>
+        <a href="../cybersecurity/" class="text-gray-600 hover:text-violet-400 transition-colors text-sm">Cybersecurity</a>
+      </div>
+      <p class="text-gray-600 text-sm mono">Built with intent · Doha, Qatar</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          document.getElementById('mobile-menu').classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
